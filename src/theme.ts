@@ -1,14 +1,23 @@
-import { createMakeStyles } from "tss-react";
-import { createThemeProvider, defaultGetTypographyDesc } from "onyxia-ui";
-import { createText } from "onyxia-ui/Text";
+import { createOnyxiaUi, defaultPalette, defaultGetTypographyDesc } from "onyxia-ui";
+import "onyxia-ui/assets/fonts/WorkSans/font.css";
+import "onyxia-ui/assets/fonts/Marianne/font.css";
 
+const { OnyxiaUi, ofTypeTheme } = createOnyxiaUi({
+    BASE_URL: import.meta.env.BASE_URL,
+    getTypographyDesc: params => {
+        const typographyDesc = defaultGetTypographyDesc(params);
 
-export const { useTheme, ThemeProvider } = createThemeProvider({
-	"getTypographyDesc": params => ({
-		...defaultGetTypographyDesc(params),
-		"fontFamily": '"Open Sans", sans-serif'
-	})
+        return {
+            ...typographyDesc,
+            fontFamily: '"Work Sans", sans-serif'
+        };
+    },
+    palette: {
+        ...defaultPalette
+        // Your custom color
+    }
 });
 
-export const { makeStyles } = createMakeStyles({ useTheme });
-export const { Text } = createText({ useTheme });
+export { OnyxiaUi };
+
+export type Theme = typeof ofTypeTheme;

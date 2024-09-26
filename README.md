@@ -4,39 +4,33 @@ https://mesastar.org
 
 page created by: Philip Mocz (2024)
 
-Uses https://github.com/thieryw/gitlanding React components
+## Repository structure
 
-Starts from demo project files: https://github.com/garronej/gitlanding-demo
+-   The `main` branch contains the website source code
+-   The `gh-pages` branch stores the built website
+
+## Updating the website
+
+Check out the repo, make changes to the source code, commit to repo, and, to publish the page, run:
+
+```console
+npm run deploy
+```
 
 ## How the website was set up
 
-```console
-yarn create react-app . --template gitlanding
+Uses https://github.com/thieryw/gitlanding (v2) React components
 
-git add -A
-git commit -m "Initial commit"
-git push
-```
+Starts from demo template: https://github.com/garronej/gitlanding-demo
 
-Fix React Router issue to be compatible with GitHub pages:
-https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
+Follows guide on publishing React web apps to GitHub Pages from https://github.com/gitname/react-gh-pages
 
+-   add a `homepage` property to the `package.json` file
 
-Follow guide from https://github.com/gitname/react-gh-pages
-
-Add a `homepage` property to the `package.json` file
-
-In `package.json` 
-Add a `predeploy` property and a `deploy` property to the scripts object:
+-   also add a `predeploy` property and a `deploy` property to the `scripts` object:
 
 ```json
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-```
-
-Push the React app to the GitHub repository
-
-```console
-npm run deploy
 ```
