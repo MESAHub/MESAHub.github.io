@@ -219,7 +219,7 @@ function Body() {
             <GlSectionDivider />
 
             <GlArticle
-                title="Interested in Trying MESA?"
+                title="Interested in trying MESA?"
                 buttonLabel="Get Started Here"
                 buttonLink={{
                     href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
