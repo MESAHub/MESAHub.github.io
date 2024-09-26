@@ -219,11 +219,17 @@ function Body() {
             <GlSectionDivider />
 
             <GlArticle
-                title="Interested in trying MESA?"
+                title="Interested in Trying MESA?"
                 buttonLabel="Get Started Here"
                 buttonLink={{
                     href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
                 }}
+                illustration={{
+                    type: "image",
+                    src: contribImageSrc,
+                    hasShadow: false
+                }}
+                hasAnimation={true}
             />
 
             <GlSectionDivider />
