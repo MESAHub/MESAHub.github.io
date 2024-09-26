@@ -70,7 +70,7 @@ function Header() {
 function Footer() {
     return (
         <GlFooter
-            bottomDivContent="`[Edit this website](https://github.com/MESAHub/mesahub.github.io)`"
+            bottomDivContent="© Copyright 2024, The MESA Team."
             links={[
                 {
                     href: "https://github.com/MESAHub/mesa/blob/master/LICENSE",
