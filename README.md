@@ -11,9 +11,12 @@ page created by: Philip Mocz (2024)
 
 ## Updating the website
 
-Check out the repo, make changes to the source code, commit to repo, and, to publish the page, run:
+A Github Action will automatically rebuild the website when changes are pushed to the repository.
+
+The website may also manually be built by checking out the repo, and doing a
 
 ```console
+yarn install
 npm run deploy
 ```
 
