@@ -54,15 +54,12 @@ function Header() {
                 {
                     label: "Documentation",
                     href: "https://docs.mesastar.org"
-                },
-                {
-                    label: "link3",
-                    href: "https://example.com"
                 }
             ]}
             enableDarkModeSwitch={true}
             githubRepoUrl="https://github.com/MESAHub/mesa"
             githubButtonSize="large"
+            showGithubStarCount={true}
         />
     );
 }
