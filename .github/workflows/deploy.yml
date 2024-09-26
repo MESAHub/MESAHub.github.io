@@ -13,6 +13,8 @@ jobs:
       with:
         node-version: '16'
     - uses: bahmutov/npm-install@v1
+      with:
+        install-command: yarn --production-true
     - run: yarn build
     - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${{github.repository}}.git
       env:
