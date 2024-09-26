@@ -17,7 +17,7 @@ page created by: Philip Mocz (2024)
 
 ## Updating the website
 
-A Github Action will automatically rebuild the website when changes are pushed to the repository.
+A Github Action will automatically rebuild the website when changes are pushed to the repository. The major contents of the website are in `src/App.tsx`.
 
 The website may also manually be built by checking out the repo, and doing a
 

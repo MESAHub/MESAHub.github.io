@@ -63,14 +63,6 @@ function Header() {
             enableDarkModeSwitch={true}
             githubRepoUrl="https://github.com/MESAHub/mesa"
             githubButtonSize="large"
-            customItemEnd={{
-                item: <button>Custom Item Start</button>,
-                behaviorOnSmallDevice: "hide"
-            }}
-            customItemStart={{
-                item: <button>Custom Item End</button>,
-                behaviorOnSmallDevice: "wrap"
-            }}
         />
     );
 }
@@ -78,14 +70,8 @@ function Header() {
 function Footer() {
     return (
         <GlFooter
-            bottomDivContent="Licence M I T"
-            email="email@email.com"
-            phoneNumber="+33545345676"
+            bottomDivContent="`[Edit this website](https://github.com/MESAHub/mesahub.github.io)`"
             links={[
-                {
-                    href: "https://example.com",
-                    label: "link 1"
-                },
                 {
                     href: "https://github.com/MESAHub/mesa/blob/master/LICENSE",
                     label: <img src="https://img.shields.io/github/license/MESAHub/mesa" alt="" />
