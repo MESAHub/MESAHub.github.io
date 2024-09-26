@@ -21,6 +21,8 @@ git push
 
 Follow guide from https://github.com/gitname/react-gh-pages:
 
+Add a `homepage` property to the `package.json` file
+
 In `package.json` 
 Add a `predeploy` property and a `deploy` property to the scripts object:
 
