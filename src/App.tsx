@@ -54,6 +54,10 @@ function Header() {
                 {
                     label: "Documentation",
                     href: "https://docs.mesastar.org"
+                },
+                {
+                    label: "link3",
+                    href: "https://example.com"
                 }
             ]}
             enableDarkModeSwitch={true}
