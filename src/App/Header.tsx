@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { GlHeader } from "gitlanding/GlHeader";
-import { routes } from "router";
 import { declareComponentKeys, useTranslation, useLang } from "i18n";
 import { createLanguageSelect } from "onyxia-ui/LanguageSelect";
 import type { Language } from "i18n";
@@ -8,7 +7,6 @@ import type { Language } from "i18n";
 const { LanguageSelect } = createLanguageSelect<Language>({
 	"languagesPrettyPrint": {
 		"en": "English",
-		"fr": "Francais"
 	}
 })
 
@@ -16,11 +14,11 @@ export const Header = memo(() => {
 	const { t } = useTranslation({ Header })
 	const { lang, setLang } = useLang();
 	return <GlHeader
-		title={<a {...routes.home().link}><h1>{t("headerTitle")}</h1></a>}
+		title={<h1>{t("headerTitle")}</h1>}
 		links={[
 			{
 				"label": t("link1label"),
-				...routes.pageExample().link
+				"href": "https://example.com",
 			},
 			{
 				"label": t("link2label"),
