@@ -45,7 +45,7 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            /* title="MESA" */
+            title="MESA"
             links={[
                 {
                     label: "GitHub",
