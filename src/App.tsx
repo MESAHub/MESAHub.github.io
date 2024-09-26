@@ -45,23 +45,19 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            title="Title large screen light"
+            /* title="MESA" */
             links={[
                 {
-                    label: "link1",
-                    href: "https://example.com"
+                    label: "GitHub",
+                    href: "https://github.com/MESAHub/mesa"
                 },
                 {
-                    label: "link2",
-                    href: "https://example.com"
-                },
-                {
-                    label: "link3",
-                    href: "https://example.com"
+                    label: "Documentation",
+                    href: "https://docs.mesastar.org"
                 }
             ]}
             enableDarkModeSwitch={true}
-            githubRepoUrl="https://github.com/torvalds/linux"
+            githubRepoUrl="https://github.com/MESAHub/mesa"
             githubButtonSize="large"
             customItemEnd={{
                 item: <button>Custom Item Start</button>,
@@ -87,12 +83,12 @@ function Footer() {
                     label: "link 1"
                 },
                 {
-                    href: "https://example.com",
-                    label: "link 2"
+                    href: "https://github.com/MESAHub/mesa/blob/master/LICENSE",
+                    label: <img src="https://img.shields.io/github/license/MESAHub/mesa" alt="" />
                 },
                 {
-                    href: "https://www.npmjs.com/package/tss-react",
-                    label: <img src="https://img.shields.io/npm/dw/tss-react" alt="" />
+                    href: "https://github.com/MESAHub/mesa/releases/latest",
+                    label: <img src="https://img.shields.io/github/v/release/MESAHub/mesa" alt="" />
                 }
             ]}
         />
@@ -103,8 +99,8 @@ function Body() {
     return (
         <>
             <GlHero
-                title="Hero title very very long title indeed"
-                subTitle={"Hero subtitle very very long sub title indeed"}
+                title="MESA"
+                subTitle={"Modules for Experiments in Stellar Astrophysics"}
                 hasLinkToSectionBellow={true}
                 hasAnimation={false}
                 illustration={{
