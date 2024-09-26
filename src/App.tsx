@@ -67,7 +67,7 @@ function Header() {
 function Footer() {
     return (
         <GlFooter
-            bottomDivContent="© Copyright 2024, The MESA Team."
+            bottomDivContent="© Copyright 2024, The MESA Team. - [GitHub](https://github.com/MESAHub/mesa) - [Documentation](https://docs.mesastar.org) - [Edit this website](https://github.com/MESAHub/MESAHub.github.io)"
             links={[
                 {
                     href: "https://github.com/MESAHub/mesa/blob/master/LICENSE",
@@ -215,6 +215,16 @@ function Body() {
                     />
                 </>
             </GlCards>
+
+            <GlSectionDivider />
+
+            <GlArticle
+                title="Interested in trying MESA?"
+                buttonLabel="Get Started Here"
+                buttonLink={{
+                    href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
+                }}
+            />
 
             <GlSectionDivider />
 
