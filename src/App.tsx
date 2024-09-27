@@ -43,7 +43,7 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            title="MESA"
+            title={<img src={mesaLogoPng} width="300" alt="MESA" />}
             links={[
                 {
                     label: "GitHub",
@@ -84,8 +84,10 @@ function Body() {
     return (
         <>
             <GlHero
-                title="MESA"
-                subTitle={"Modules for Experiments in Stellar Astrophysics"}
+                title={"Modules for Experiments in Stellar Astrophysics"}
+                subTitle={
+                    "a versatile open-source software suite to run experiments in stellar evolution"
+                }
                 hasLinkToSectionBellow={true}
                 illustration={{
                     type: "video",
