@@ -11,11 +11,8 @@ import { GlCheckList } from "gitlanding/GlCheckList";
 /*iimport { GlSlider } from "gitlanding/GlSlider";
 import { GlReviewSlide } from "gitlanding/GlReviewSlide";*/
 import { GlHeader } from "gitlanding/GlHeader";
-/*import videoSafari from "./assets/videos/vsafari.mp4";
-import videoChrome from "./assets/videos/vchrome.webm";*/
-import imageSrc from "./assets/test-images/test6.jpeg";
-import contribImageSrc from "./assets/illustrations/contribution.png";
-import sspcloudMp4 from "./assets/videos/sspcloud.mp4";
+import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
+import mesaMp4 from "./assets/videos/mesa1.mp4";
 import tileSvgUrl from "./assets/svg/redash.svg";
 import { OnyxiaUi } from "theme";
 
@@ -89,12 +86,17 @@ function Body() {
                 title="MESA"
                 subTitle={"Modules for Experiments in Stellar Astrophysics"}
                 hasLinkToSectionBellow={true}
-                hasAnimation={false}
                 illustration={{
-                    type: "image",
-                    src: imageSrc
+                    type: "video",
+                    hasShadow: false,
+                    sources: [
+                        {
+                            src: mesaMp4,
+                            type: "video/mp4"
+                        }
+                    ]
                 }}
-                //illustrationZoomFactor={1.2}
+                hasAnimation={true}
             />
 
             <GlCards>
@@ -160,7 +162,7 @@ function Body() {
                     hasShadow: false,
                     sources: [
                         {
-                            src: sspcloudMp4,
+                            src: mesaMp4,
                             type: "video/mp4"
                         }
                     ]
@@ -233,7 +235,7 @@ function Body() {
                 }}
                 illustration={{
                     type: "image",
-                    src: contribImageSrc,
+                    src: mesaLogoPng,
                     hasShadow: false
                 }}
                 hasAnimation={true}
