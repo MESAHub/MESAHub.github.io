@@ -14,7 +14,6 @@ import { GlHeader } from "gitlanding/GlHeader";
 /*import mesaIconPng from "./assets/img/mesa-favicon.png";*/
 import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
-import tileSvgUrl from "./assets/svg/redash.svg";
 import { OnyxiaUi } from "theme";
 
 export function App() {
@@ -106,16 +105,10 @@ function Body() {
                 {
                     <>
                         <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                nisl nec hendrerit rutrum, 
-                mi enim semper arcu, ut imperdiet urna libero non metus.
-                nisl nec hendrerit rutrum, 
-                mi enim semper arcu, ut imperdiet urna libero non metus.
-                `}
-                            buttonLabel="Button Label"
+                            title="Code repository"
+                            paragraph={`Lorem`}
+                            buttonLabel="Code repository"
                             iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731999-a2d8f901-3d7d-40a9-b59f-102ee1facc45.png",
                                 "https://user-images.githubusercontent.com/39378411/135731995-136d4baf-58a6-4cb3-a72c-b8ddce835b3c.png"
                             ]}
                         />
@@ -129,7 +122,38 @@ function Body() {
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
                         />
-
+                        <GlLogoCard
+                            title="Card title"
+                            paragraph={`Lorem`}
+                            buttonLabel="Button Label"
+                            iconUrls={[
+                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
+                            ]}
+                        />
+                        <GlLogoCard
+                            title="Card title"
+                            paragraph={`Lorem`}
+                            buttonLabel="Button Label"
+                            iconUrls={[
+                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
+                            ]}
+                        />
+                        <GlLogoCard
+                            title="Card title"
+                            paragraph={`Lorem`}
+                            buttonLabel="Button Label"
+                            iconUrls={[
+                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
+                            ]}
+                        />
+                        <GlLogoCard
+                            title="Card title"
+                            paragraph={`Lorem`}
+                            buttonLabel="Button Label"
+                            iconUrls={[
+                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
+                            ]}
+                        />
                         <GlLogoCard
                             title="Card title"
                             paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
@@ -192,7 +216,6 @@ function Body() {
                     },
                     {
                         title: "List element title",
-                        iconOverride: tileSvgUrl,
                         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
               nisl nec hendrerit rutrum, 
               mi enim semper arcu, ut imperdiet urna libero non metus. 
