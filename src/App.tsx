@@ -8,9 +8,10 @@ import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
 /*import { GlMetricCard } from "gitlanding/GlCards/GlMetricCard";
 import { GlProjectCard } from "gitlanding/GlCards/GlProjectCard";*/
 import { GlCheckList } from "gitlanding/GlCheckList";
-/*iimport { GlSlider } from "gitlanding/GlSlider";
+/*import { GlSlider } from "gitlanding/GlSlider";
 import { GlReviewSlide } from "gitlanding/GlReviewSlide";*/
 import { GlHeader } from "gitlanding/GlHeader";
+/*import mesaIconPng from "./assets/img/mesa-favicon.png";*/
 import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
 import tileSvgUrl from "./assets/svg/redash.svg";
