@@ -5,11 +5,11 @@ import { GlFooter } from "gitlanding/GlFooter";
 import { GlSectionDivider } from "gitlanding/GlSectionDivider";
 import { GlCards } from "gitlanding/GlCards";
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
-import { GlMetricCard } from "gitlanding/GlCards/GlMetricCard";
-import { GlProjectCard } from "gitlanding/GlCards/GlProjectCard";
+/*import { GlMetricCard } from "gitlanding/GlCards/GlMetricCard";
+import { GlProjectCard } from "gitlanding/GlCards/GlProjectCard";*/
 import { GlCheckList } from "gitlanding/GlCheckList";
-import { GlSlider } from "gitlanding/GlSlider";
-import { GlReviewSlide } from "gitlanding/GlReviewSlide";
+/*iimport { GlSlider } from "gitlanding/GlSlider";
+import { GlReviewSlide } from "gitlanding/GlReviewSlide";*/
 import { GlHeader } from "gitlanding/GlHeader";
 /*import videoSafari from "./assets/videos/vsafari.mp4";
 import videoChrome from "./assets/videos/vchrome.webm";*/
@@ -97,27 +97,6 @@ function Body() {
                 //illustrationZoomFactor={1.2}
             />
 
-            <GlCards title="Title">
-                <GlMetricCard
-                    buttonLabel="button label"
-                    isNumberAnimated={true}
-                    number={44}
-                    subHeading="sub heading"
-                />
-                <GlMetricCard
-                    buttonLabel="button label"
-                    isNumberAnimated={true}
-                    number={44}
-                    subHeading="sub heading"
-                />
-                <GlMetricCard
-                    buttonLabel="button label"
-                    isNumberAnimated={true}
-                    number={44}
-                    subHeading="sub heading"
-                />
-            </GlCards>
-
             <GlCards>
                 {
                     <>
@@ -164,8 +143,6 @@ function Body() {
                 }
             </GlCards>
 
-            <GlSectionDivider />
-
             <GlArticle
                 title="Article title"
                 body={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
@@ -191,71 +168,10 @@ function Body() {
                 hasAnimation={true}
             />
 
-            <GlCards>
-                <>
-                    <GlProjectCard
-                        title="Project Card Title verry long title xxxxxxxxxxxxxxxx"
-                        subtitle="Project Card Subtitle"
-                        projectImageUrl="https://user-images.githubusercontent.com/39378411/135731821-0f1c7165-fada-418f-896a-c36a0e55171b.png"
-                    />
-                    <GlProjectCard
-                        title="Project Card Title"
-                        subtitle="Project Card Subtitle"
-                        projectImageUrl="https://user-images.githubusercontent.com/39378411/135731810-93193eba-ada5-460a-96ad-948215278850.png"
-                    />
-                    <GlProjectCard
-                        title="Project Card Title"
-                        subtitle="Project Card Subtitle"
-                        projectImageUrl="https://user-images.githubusercontent.com/39378411/135731819-1cf18697-e946-449f-ad6e-be414e341c40.png"
-                    />
-                    <GlProjectCard
-                        title="Project Card Title"
-                        subtitle="Project Card Subtitle"
-                        projectImageUrl="https://user-images.githubusercontent.com/39378411/135731914-0265b77e-3338-4747-b014-e845f16332a7.png"
-                    />
-                </>
-            </GlCards>
-
             <GlSectionDivider />
-
-            <GlArticle
-                title="Interested in trying MESA?"
-                buttonLabel="Get Started Here"
-                buttonLink={{
-                    href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
-                }}
-                illustration={{
-                    type: "image",
-                    src: contribImageSrc,
-                    hasShadow: false
-                }}
-                hasAnimation={true}
-            />
-
-            <GlSectionDivider />
-
-            <GlArticle
-                title="Article title"
-                body={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-        nisl nec hendrerit rutrum, 
-        mi enim semper arcu, ut imperdiet urna libero non metus. 
-        Donec imperdiet ac nulla sit amet lacinia. 
-        Suspendisse volutpat lectus vitae libero luctus, a egestas magna egestas. 
-        Suspendisse potenti. In semper erat scelerisque sapien convallis porttitor.`}
-                buttonLabel="Article Button label"
-                buttonLink={{
-                    href: "https://example.com"
-                }}
-                illustration={{
-                    type: "image",
-                    src: contribImageSrc,
-                    hasShadow: false
-                }}
-                hasAnimation={true}
-            />
 
             <GlCheckList
-                heading="Check List Heading"
+                heading="Modules"
                 hasAnimation={true}
                 elements={[
                     {
@@ -309,43 +225,18 @@ function Body() {
 
             <GlSectionDivider />
 
-            <GlSlider
-                title="Review slider title"
-                autoPlayTimeInterval={4}
-                slides={[
-                    <GlReviewSlide
-                        descriptionMd={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-        nisl nec hendrerit rutrum, 
-        mi enim semper arcu, ut imperdiet urna libero non metus. 
-        Donec imperdiet ac nulla sit amet lacinia. 
-        Suspendisse volutpat lectus vitae libero luctus, a egestas magna egestas. 
-        Suspendisse potenti. In semper erat scelerisque sapien convallis porttitor.
-            `}
-                        signature="Signature montpe qsdfmlkj zepoi qsdmlkj ezoir dsfj aezoiru qsdlfkj aezroiu qmldskjf ozeoioidfjgh qsdf lkjhz eroiu kj"
-                    />,
-                    <GlReviewSlide
-                        logoUrl="https://user-images.githubusercontent.com/39378411/135731995-136d4baf-58a6-4cb3-a72c-b8ddce835b3c.png"
-                        descriptionMd={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-        nisl nec hendrerit rutrum, 
-        mi enim semper arcu, ut imperdiet urna libero non metus. 
-        Donec imperdiet ac nulla sit amet lacinia. 
-        Suspendisse volutpat lectus vitae libero luctus, a egestas magna egestas. 
-        Suspendisse potenti. In semper erat scelerisque sapien convallis porttitor.
-            `}
-                        signature="Signature"
-                    />,
-                    <GlReviewSlide
-                        logoUrl="https://user-images.githubusercontent.com/39378411/135731999-a2d8f901-3d7d-40a9-b59f-102ee1facc45.png"
-                        descriptionMd={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-        nisl nec hendrerit rutrum, 
-        mi enim semper arcu, ut imperdiet urna libero non metus. 
-        Donec imperdiet ac nulla sit amet lacinia. 
-        Suspendisse volutpat lectus vitae libero luctus, a egestas magna egestas. 
-        Suspendisse potenti. In semper erat scelerisque sapien convallis porttitor.
-            `}
-                        signature="Signature"
-                    />
-                ]}
+            <GlArticle
+                title="Interested in trying MESA?"
+                buttonLabel="Get Started Here"
+                buttonLink={{
+                    href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
+                }}
+                illustration={{
+                    type: "image",
+                    src: contribImageSrc,
+                    hasShadow: false
+                }}
+                hasAnimation={true}
             />
         </>
     );
