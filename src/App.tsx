@@ -206,12 +206,12 @@ function Body() {
                         description: `module for binary star evolution`
                     },
                     {
-                        title: "Atmospheres (atm)",
-                        description: `calculates the surface temperature and pressure, to use as boundary conditions`
-                    },
-                    {
                         title: "Asteroseismology (astero)",
                         description: `calculates asteroseismic variables`
+                    },
+                    {
+                        title: "Atmospheres (atm)",
+                        description: `calculates the surface temperature and pressure, to use as boundary conditions`
                     },
                     {
                         title: "Automatic Differentiation (auto_diff)",
