@@ -15,6 +15,8 @@ import { GlHeader } from "gitlanding/GlHeader";
 import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
 import githubPng from "./assets/img/github.png";
+import readthedocsPng from "./assets/img/readthedocs.png";
+import zenodoPng from "./assets/img/zenodo.png";
 import { OnyxiaUi } from "theme";
 
 export function App() {
@@ -121,9 +123,7 @@ function Body() {
                             link={{
                                 href: "https://docs.mesastar.org/"
                             }}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
-                            ]}
+                            iconUrls={[readthedocsPng]}
                         />
                         <GlLogoCard
                             title="Zenodo Community"
@@ -132,9 +132,7 @@ function Body() {
                             link={{
                                 href: "https://zenodo.org/communities/mesa/records?q=&l=list&p=1&s=10"
                             }}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
-                            ]}
+                            iconUrls={[zenodoPng]}
                         />
                         <GlLogoCard
                             title="MESA Marketplace "
