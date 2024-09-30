@@ -47,7 +47,7 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            title={<img src={mesaLogoPng} width="200" alt="MESA" />}
+            title={<img src={mesaLogoPng} width="180" alt="MESA" />}
             links={[
                 {
                     label: "GitHub",
@@ -150,7 +150,7 @@ function Body() {
                         <GlLogoCard
                             title="MESA Users Mailing List"
                             paragraph={`Info about new releases, news items, and requests for help/bug reports`}
-                            buttonLabel="Sign up for the mailing list"
+                            buttonLabel="Sign up for mailing list"
                             link={{
                                 href: "https://lists.mesastar.org/mailman/listinfo/mesa-users"
                             }}
