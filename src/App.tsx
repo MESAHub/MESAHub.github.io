@@ -14,6 +14,7 @@ import { GlHeader } from "gitlanding/GlHeader";
 /*import mesaIconPng from "./assets/img/mesa-favicon.png";*/
 import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
+import githubPng from "./assets/img/github.png";
 import { OnyxiaUi } from "theme";
 
 export function App() {
@@ -42,7 +43,7 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            title={<img src={mesaLogoPng} width="300" alt="MESA" />}
+            title={<img src={mesaLogoPng} width="200" alt="MESA" />}
             links={[
                 {
                     label: "GitHub",
@@ -106,80 +107,75 @@ function Body() {
                     <>
                         <GlLogoCard
                             title="Code repository"
-                            paragraph={`Lorem`}
-                            buttonLabel="Code repository"
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731995-136d4baf-58a6-4cb3-a72c-b8ddce835b3c.png"
-                            ]}
+                            paragraph={`Source code hosted on GitHub`}
+                            buttonLabel="Check out the code"
+                            link={{
+                                href: "https://github.com/MESAHub/mesa"
+                            }}
+                            iconUrls={[githubPng]}
                         />
                         <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                nisl nec hendrerit rutrum, 
-                mi enim semper arcu, ut imperdiet urna libero non metus.`}
-                            buttonLabel="Button Label"
+                            title="Documentation"
+                            paragraph={`How to install and use MESA`}
+                            buttonLabel="Read the docs"
+                            link={{
+                                href: "https://docs.mesastar.org/"
+                            }}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
                         />
                         <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem`}
-                            buttonLabel="Button Label"
+                            title="Zenodo Community"
+                            paragraph={`Official release versions, SDKs, and MESA project inlists downloads`}
+                            buttonLabel="Go to Zenodo"
+                            link={{
+                                href: "https://zenodo.org/communities/mesa/records?q=&l=list&p=1&s=10"
+                            }}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
                         />
                         <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem`}
-                            buttonLabel="Button Label"
+                            title="MESA Marketplace "
+                            paragraph={`Resources for published papers using MESA`}
+                            buttonLabel="Go to Marketplace"
+                            link={{
+                                href: "http://cococubed.com/mesa_market/"
+                            }}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
                         />
                         <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem`}
-                            buttonLabel="Button Label"
+                            title="MESA Users Mailing List"
+                            paragraph={`Info about new releases, news items, and requests for help/bug reports`}
+                            buttonLabel="Sign up for the mailing list"
+                            link={{
+                                href: "https://lists.mesastar.org/mailman/listinfo/mesa-users"
+                            }}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
                         />
                         <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem`}
-                            buttonLabel="Button Label"
+                            title="mesa_reader"
+                            paragraph={`Python module to interact and plot MESA data`}
+                            buttonLabel="Get mesa_reader"
+                            link={{
+                                href: "https://github.com/wmwolf/py_mesa_reader"
+                            }}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
                             ]}
-                        />
-                        <GlLogoCard
-                            title="Card title"
-                            paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                nisl nec hendrerit rutrum, 
-                mi enim semper arcu, ut imperdiet urna libero non metus.`}
-                            buttonLabel="Button Label"
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731991-3da13e97-c2f7-42b2-88ab-055aff0d6ae9.png",
-                                "https://user-images.githubusercontent.com/39378411/135731994-29a3c46a-0d92-4ec8-954e-39bfeeb06534.png",
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png",
-                                "https://user-images.githubusercontent.com/39378411/135731990-8f64ce8e-d655-4ded-9561-3d7f6893d06e.png"
-                            ]}
-                            overlapIcons={true}
                         />
                     </>
                 }
             </GlCards>
-
+            {/*
             <GlArticle
                 title="Article title"
-                body={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-        nisl nec hendrerit rutrum, 
-        mi enim semper arcu, ut imperdiet urna libero non metus. 
-        Donec imperdiet ac nulla sit amet lacinia. 
-        Suspendisse volutpat lectus vitae libero luctus, a egestas magna egestas. 
-        Suspendisse potenti. In semper erat scelerisque sapien convallis porttitor.`}
+                body={`Lorem.`}
                 buttonLabel="Article Button label"
                 buttonLink={{
                     href: "https://example.com"
@@ -199,54 +195,63 @@ function Body() {
 
             <GlSectionDivider />
 
+*/}
+
             <GlCheckList
                 heading="Modules"
                 hasAnimation={true}
                 elements={[
                     {
-                        title: "List element title",
-                        setIconColorOverride: colors => ({
-                            iconColor: colors.palette.greenSuccess.main
-                        }),
-                        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-              nisl nec hendrerit rutrum, 
-              mi enim semper arcu, ut imperdiet urna libero non metus. 
-              Donec imperdiet ac nulla sit amet lacinia.
-            `
+                        title: "Star (star)",
+                        description: `main module for stellar evolution`
                     },
                     {
-                        title: "List element title",
-                        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-              nisl nec hendrerit rutrum, 
-              mi enim semper arcu, ut imperdiet urna libero non metus. 
-              Donec imperdiet ac nulla sit amet lacinia.
-            `
+                        title: "Binary (binary)",
+                        description: `module for binary star evolution`
                     },
                     {
-                        title: "List element title",
-                        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-              nisl nec hendrerit rutrum, 
-              mi enim semper arcu, ut imperdiet urna libero non metus. 
-              Donec imperdiet ac nulla sit amet lacinia.
-            `
+                        title: "Atmospheres (atm)",
+                        description: `calculates the surface temperature and pressure, to use as boundary conditions`
                     },
                     {
-                        title: "List element title",
-                        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-              nisl nec hendrerit rutrum, 
-              mi enim semper arcu, ut imperdiet urna libero non metus. 
-              Donec imperdiet ac nulla sit amet lacinia.
-            `
+                        title: "Asteroseismology (astero)",
+                        description: `calculates asteroseismic variables`
                     },
                     {
-                        description: `(Only description) Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-              nisl nec hendrerit rutrum, 
-              mi enim semper arcu, ut imperdiet urna libero non metus. 
-              Donec imperdiet ac nulla sit amet lacinia.
-            `
+                        title: "Automatic Differentiation (auto_diff)",
+                        description: `provides automatic calculation of (forward) derivatives using the chain rule`
                     },
                     {
-                        title: "(Only title) List element title"
+                        title: "Element Data (chem)",
+                        description: `provides data on the properties of elements and isotopes`
+                    },
+                    {
+                        title: "Constants (const)",
+                        description: `defines a range of mathematical and physical constants`
+                    },
+                    {
+                        title: "Equation of State (eos)",
+                        description: `provides the equation of state`
+                    },
+                    {
+                        title: "Opacities (kap)",
+                        description: `provides radiative opacities combined with conductive opacities`
+                    },
+                    {
+                        title: "Nuclear Reaction Networks (net)",
+                        description: `implements nuclear reaction networks`
+                    },
+                    {
+                        title: "Thermal Neutrinos (neu)",
+                        description: `provides the specific rates of energy loss via various thermal neutrino processes`
+                    },
+                    {
+                        title: "Nuclear Reaction Rates (rates)",
+                        description: `provides thermonuclear reaction rates and weak reaction rates`
+                    },
+                    {
+                        title: "Turbulence (turb)",
+                        description: `provides various mixing theories (semiconvection, thermohaline, mixing length theory, time-dependant convection)`
                     }
                 ]}
             />
