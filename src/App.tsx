@@ -17,6 +17,8 @@ import mesaMp4 from "./assets/videos/mesa1.mp4";
 import githubPng from "./assets/img/github.png";
 import readthedocsPng from "./assets/img/readthedocs.png";
 import zenodoPng from "./assets/img/zenodo.png";
+import mailmanPng from "./assets/img/mailman.png";
+import pythonPng from "./assets/img/python.png";
 import { OnyxiaUi } from "theme";
 
 export function App() {
@@ -152,20 +154,16 @@ function Body() {
                             link={{
                                 href: "https://lists.mesastar.org/mailman/listinfo/mesa-users"
                             }}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
-                            ]}
+                            iconUrls={[mailmanPng]}
                         />
                         <GlLogoCard
                             title="mesa_reader"
-                            paragraph={`Python module to interact and plot MESA data`}
+                            paragraph={`Python module to interact and plot MESA data (pip install mesa_reader)`}
                             buttonLabel="Get mesa_reader"
                             link={{
                                 href: "https://github.com/wmwolf/py_mesa_reader"
                             }}
-                            iconUrls={[
-                                "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
-                            ]}
+                            iconUrls={[pythonPng]}
                         />
                     </>
                 }
