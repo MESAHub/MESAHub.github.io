@@ -11,6 +11,9 @@ import { GlCheckList } from "gitlanding/GlCheckList";
 /*import { GlSlider } from "gitlanding/GlSlider";
 import { GlReviewSlide } from "gitlanding/GlReviewSlide";*/
 import { GlHeader } from "gitlanding/GlHeader";
+import { CopyBlock, dracula } from "react-code-blocks";
+import { useEffect, useState } from "react";
+import mesaBib from "./assets/txt/mesa.bib.txt";
 /*import mesaIconPng from "./assets/img/mesa-favicon.png";*/
 import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
@@ -29,6 +32,19 @@ export function App() {
             <AppContextualized />
         </OnyxiaUi>
     );
+}
+
+function useMesaBibTxt() {
+    const [mesaBibTxt, setMesaBibTxt] = useState<string>("");
+
+    useEffect(() => {
+        fetch(mesaBib)
+            .then(response => response.text())
+            .then(text => setMesaBibTxt(text))
+            .catch(error => console.error("Error fetching mesa.bib.txt:", error));
+    }, []);
+
+    return mesaBibTxt;
 }
 
 function AppContextualized() {
@@ -188,6 +204,7 @@ function Body() {
                     </>
                 }
             </GlCards>
+
             {/*
             <GlArticle
                 title="Article title"
@@ -210,8 +227,9 @@ function Body() {
             />
 
             <GlSectionDivider />
+            */}
 
-*/}
+            <GlSectionDivider />
 
             <GlCheckList
                 heading="Modules"
@@ -286,6 +304,21 @@ function Body() {
                     hasShadow: false
                 }}
                 hasAnimation={true}
+            />
+
+            <GlArticle
+                title="MESA papers to cite"
+                body={
+                    <div style={{ maxHeight: "500px", overflowY: "auto" }}>
+                        <CopyBlock
+                            language={"bash"}
+                            text={useMesaBibTxt()}
+                            showLineNumbers={true}
+                            theme={dracula}
+                            codeBlock
+                        />
+                    </div>
+                }
             />
         </>
     );

@@ -22,6 +22,7 @@
         "gitlanding": "^2.0.0-rc.3",
         "onyxia-ui": "^5.3.3",
         "react": "^18.3.1",
+        "react-code-blocks": "^0.1.6",
         "react-dom": "^18.3.1",
         "tss-react": "^4.9.13"
     },
