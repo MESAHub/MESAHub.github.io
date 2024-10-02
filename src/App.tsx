@@ -287,7 +287,7 @@ function Body() {
             <GlArticle
                 title="MESA papers to cite"
                 body={
-                    <div style={{ maxHeight: "300px", overflowY: "auto", width: "350px" }}>
+                    <div style={{ maxHeight: "250px", overflowY: "auto", width: "320px" }}>
                         <CopyBlock
                             language={"bash"}
                             text={useMesaBibTxt()}
