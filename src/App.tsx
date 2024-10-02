@@ -205,30 +205,6 @@ function Body() {
                 }
             </GlCards>
 
-            {/*
-            <GlArticle
-                title="Article title"
-                body={`Lorem.`}
-                buttonLabel="Article Button label"
-                buttonLink={{
-                    href: "https://example.com"
-                }}
-                illustration={{
-                    type: "video",
-                    hasShadow: false,
-                    sources: [
-                        {
-                            src: mesaMp4,
-                            type: "video/mp4"
-                        }
-                    ]
-                }}
-                hasAnimation={true}
-            />
-
-            <GlSectionDivider />
-            */}
-
             <GlSectionDivider />
 
             <GlCheckList
@@ -306,10 +282,12 @@ function Body() {
                 hasAnimation={true}
             />
 
+            <GlSectionDivider />
+
             <GlArticle
                 title="MESA papers to cite"
                 body={
-                    <div style={{ maxHeight: "500px", overflowY: "auto" }}>
+                    <div style={{ maxHeight: "400px", overflowY: "auto", width: "500px" }}>
                         <CopyBlock
                             language={"bash"}
                             text={useMesaBibTxt()}
