@@ -269,22 +269,6 @@ function Body() {
             <GlSectionDivider />
 
             <GlArticle
-                title="Interested in trying MESA?"
-                buttonLabel="Get Started Here"
-                buttonLink={{
-                    href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
-                }}
-                illustration={{
-                    type: "image",
-                    src: mesaLogoPng,
-                    hasShadow: false
-                }}
-                hasAnimation={true}
-            />
-
-            <GlSectionDivider />
-
-            <GlArticle
                 title="MESA papers to cite"
                 body={
                     <div style={{ maxHeight: "300px", overflowY: "auto", width: "350px" }}>
@@ -297,6 +281,22 @@ function Body() {
                         />
                     </div>
                 }
+            />
+
+            <GlSectionDivider />
+
+            <GlArticle
+                title="Interested in trying MESA?"
+                buttonLabel="Get Started Here"
+                buttonLink={{
+                    href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
+                }}
+                illustration={{
+                    type: "image",
+                    src: mesaLogoPng,
+                    hasShadow: false
+                }}
+                hasAnimation={true}
             />
         </>
     );
