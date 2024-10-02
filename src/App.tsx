@@ -19,6 +19,8 @@ import readthedocsPng from "./assets/img/readthedocs.png";
 import zenodoPng from "./assets/img/zenodo.png";
 import mailmanPng from "./assets/img/mailman.png";
 import pythonPng from "./assets/img/python.png";
+import webPng from "./assets/img/web.png";
+import schoolPng from "./assets/img/school.png";
 import { OnyxiaUi } from "theme";
 
 export function App() {
@@ -110,7 +112,7 @@ function Body() {
                 {
                     <>
                         <GlLogoCard
-                            title="Code repository"
+                            title="Code Repository"
                             paragraph={`Source code hosted on GitHub`}
                             buttonLabel="Check out the code"
                             link={{
@@ -164,6 +166,24 @@ function Body() {
                                 href: "https://github.com/wmwolf/py_mesa_reader"
                             }}
                             iconUrls={[pythonPng]}
+                        />
+                        <GlLogoCard
+                            title="MESA Summer Schools"
+                            paragraph={`Materials from past MESA workshops and how to host your own`}
+                            buttonLabel="Check out MESA Summer Schools"
+                            link={{
+                                href: "https://docs.mesastar.org/en/24.08.1/summer_schools.html"
+                            }}
+                            iconUrls={[schoolPng]}
+                        />
+                        <GlLogoCard
+                            title="MESA-web"
+                            paragraph={`Web interface to run MESA experiments`}
+                            buttonLabel="Try out MESA-web"
+                            link={{
+                                href: "http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit"
+                            }}
+                            iconUrls={[webPng]}
                         />
                     </>
                 }
