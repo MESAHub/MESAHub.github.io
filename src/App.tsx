@@ -169,8 +169,8 @@ function Body() {
                         />
                         <GlLogoCard
                             title="MESA Summer Schools"
-                            paragraph={`Materials from past MESA workshops and how to host your own`}
-                            buttonLabel="Check out MESA Summer Schools"
+                            paragraph={`Materials from past MESA schools and how to host your own`}
+                            buttonLabel="Check out MESA summer schools"
                             link={{
                                 href: "https://docs.mesastar.org/en/24.08.1/summer_schools.html"
                             }}
