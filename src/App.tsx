@@ -128,7 +128,7 @@ function Body() {
                 title="Interested in trying MESA?"
                 buttonLabel="Install MESA"
                 buttonLink={{
-                    href: "https://docs.mesastar.org/en/24.08.1/quickstart.html"
+                    href: "https://docs.mesastar.org/en/latest/quickstart.html"
                 }}
                 illustration={{
                     type: "image",
@@ -202,7 +202,7 @@ function Body() {
                             paragraph={`Materials from past MESA schools and how to host your own`}
                             buttonLabel="Check out MESA summer schools"
                             link={{
-                                href: "https://docs.mesastar.org/en/24.08.1/summer_schools.html"
+                                href: "https://docs.mesastar.org/en/latest/summer_schools.html"
                             }}
                             iconUrls={[schoolPng]}
                         />
