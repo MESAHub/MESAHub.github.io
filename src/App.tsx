@@ -87,7 +87,7 @@ function Header() {
 function Footer() {
     return (
         <GlFooter
-            bottomDivContent="© Copyright 2024, The MESA Team. - [GitHub](https://github.com/MESAHub/mesa) - [Documentation](https://docs.mesastar.org) - [Edit this website](https://github.com/MESAHub/MESAHub.github.io)"
+            bottomDivContent="© Copyright 2025, The MESA Team. - [GitHub](https://github.com/MESAHub/mesa) - [Documentation](https://docs.mesastar.org) - [Edit this website](https://github.com/MESAHub/MESAHub.github.io)"
             links={[
                 {
                     href: "https://github.com/MESAHub/mesa/blob/master/LICENSE",
@@ -283,7 +283,7 @@ function Body() {
             <GlSectionDivider />
 
             <GlArticle
-                title="MESA papers to cite"
+                title="Cite the MESA papers"
                 body={
                     <div style={{ maxHeight: "420px", overflowY: "auto", width: "700px" }}>
                         <CopyBlock
