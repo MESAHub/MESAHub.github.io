@@ -1,8 +1,4 @@
-.. image:: public/mesa-logo2-200.png
-:align: center
-:width: 200
-:alt: MESA
-:target: https://docs.mesastar.org/en/latest/
+[![MESA](public/mesa-logo2-200.png)](https://mesastar.org/en/latest/)
 
 # MESA GitHub Pages Landing Page
 
