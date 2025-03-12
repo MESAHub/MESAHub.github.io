@@ -1,4 +1,4 @@
-[![MESA](public/mesa-logo2-200.png)](https://mesastar.org/en/latest/)
+[![MESA](public/mesa-logo.png)](https://mesastar.org/en/latest/)
 
 # MESA GitHub Pages Landing Page
 

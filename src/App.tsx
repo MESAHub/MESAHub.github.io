@@ -15,7 +15,7 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import { useEffect, useState } from "react";
 import mesaBib from "./assets/txt/mesa.bib.txt";
 /*import mesaIconPng from "./assets/img/mesa-favicon.png";*/
-import mesaLogoPng from "./assets/img/mesa_logo2_200pt.png";
+import mesaLogoPng from "./assets/img/mesa-logo.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
 import githubPng from "./assets/img/github.png";
 import readthedocsPng from "./assets/img/readthedocs.png";
