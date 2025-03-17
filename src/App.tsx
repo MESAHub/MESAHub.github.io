@@ -202,7 +202,7 @@ function Body() {
                             paragraph={`Materials from past MESA schools and how to host your own`}
                             buttonLabel="Check out MESA summer schools"
                             link={{
-                                href: "https://docs.mesastar.org/en/latest/summer_schools.html"
+                                href: "https://cococubed.com/mesa_market/education.html"
                             }}
                             iconUrls={[schoolPng]}
                         />
