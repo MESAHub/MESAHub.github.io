@@ -22,6 +22,14 @@ yarn install
 npm run deploy
 ```
 
+Then, to view the webpage, do
+
+```console
+npm run preview
+```
+
+and open `http://localhost:4173/` in your browser.
+
 ## How the website was set up
 
 Uses https://github.com/thieryw/gitlanding (v2) React components

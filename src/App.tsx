@@ -17,6 +17,8 @@ import mesaBib from "./assets/txt/mesa.bib.txt";
 /*import mesaIconPng from "./assets/img/mesa-favicon.png";*/
 import mesaLogoPng from "./assets/img/mesa-logo.png";
 import mesaMp4 from "./assets/videos/mesa1.mp4";
+import mesaPng from "./assets/img/mesa-favicon.png";
+import sdkPng from "./assets/img/sdk.png";
 import githubPng from "./assets/img/github.png";
 import readthedocsPng from "./assets/img/readthedocs.png";
 import zenodoPng from "./assets/img/zenodo.png";
@@ -142,9 +144,27 @@ function Body() {
                 {
                     <>
                         <GlLogoCard
+                            title="MESA"
+                            paragraph={`Latest MESA release version`}
+                            buttonLabel="Get MESA"
+                            link={{
+                                href: "https://zenodo.org/records/13353788"
+                            }}
+                            iconUrls={[mesaPng]}
+                        />
+                        <GlLogoCard
+                            title="MESA SDK"
+                            paragraph={`MESA Software Development Kit`}
+                            buttonLabel="Get MESA SDK"
+                            link={{
+                                href: "http://user.astro.wisc.edu/~townsend/static.php?ref=mesasdk"
+                            }}
+                            iconUrls={[sdkPng]}
+                        />
+                        <GlLogoCard
                             title="Code Repository"
                             paragraph={`Source code hosted on GitHub`}
-                            buttonLabel="Check out the code"
+                            buttonLabel="Check out source code"
                             link={{
                                 href: "https://github.com/MESAHub/mesa"
                             }}
@@ -209,7 +229,7 @@ function Body() {
                         <GlLogoCard
                             title="MESA-web"
                             paragraph={`Web interface to run MESA experiments`}
-                            buttonLabel="Try out MESA-web"
+                            buttonLabel="Try MESA-web"
                             link={{
                                 href: "http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit"
                             }}
