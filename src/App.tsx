@@ -173,7 +173,7 @@ function Body() {
                             paragraph={`Resources for published papers using MESA`}
                             buttonLabel="Go to Marketplace"
                             link={{
-                                href: "http://cococubed.com/mesa_market/"
+                                href: "https://mesastar.org/marketplace/"
                             }}
                             iconUrls={[
                                 "https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png"
@@ -202,7 +202,7 @@ function Body() {
                             paragraph={`Materials from past MESA schools and how to host your own`}
                             buttonLabel="Check out MESA summer schools"
                             link={{
-                                href: "https://cococubed.com/mesa_market/education.html"
+                                href: "https://mesastar.org/marketplace/education/#mesa-summer-school-web-pages"
                             }}
                             iconUrls={[schoolPng]}
                         />
@@ -298,7 +298,6 @@ function Body() {
             />
 
             <GlSectionDivider />
-
         </>
     );
 }
