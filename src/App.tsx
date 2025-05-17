@@ -76,6 +76,10 @@ function Header() {
                 {
                     label: "Documentation",
                     href: "https://docs.mesastar.org"
+                },
+                {
+                    label: "Summer Schools",
+                    href: "https://mesastar.org/summer-schools/"
                 }
             ]}
             enableDarkModeSwitch={true}
@@ -222,7 +226,7 @@ function Body() {
                             paragraph={`Materials from past MESA schools and how to host your own`}
                             buttonLabel="Check out MESA summer schools"
                             link={{
-                                href: "https://mesastar.org/marketplace/education/#mesa-summer-school-web-pages"
+                                href: "https://mesastar.org/summer-schools/"
                             }}
                             iconUrls={[schoolPng]}
                         />
