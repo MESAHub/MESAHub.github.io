@@ -67,7 +67,11 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            title={<img src={mesaLogoPng} width="180" alt="MESA" />}
+            title={
+                <a href="https://mesastar.org">
+                    <img src={mesaLogoPng} width="180" alt="MESA" />
+                </a>
+            }
             links={[
                 {
                     label: "GitHub",
@@ -76,6 +80,10 @@ function Header() {
                 {
                     label: "Documentation",
                     href: "https://docs.mesastar.org"
+                },
+                {
+                    label: "Summer Schools",
+                    href: "/summer-schools"
                 }
             ]}
             enableDarkModeSwitch={true}
