@@ -67,11 +67,7 @@ function AppContextualized() {
 function Header() {
     return (
         <GlHeader
-            title={
-                <a href="https://mesastar.org">
-                    <img src={mesaLogoPng} width="180" alt="MESA" />
-                </a>
-            }
+            title={<img src={mesaLogoPng} width="180" alt="MESA" />}
             links={[
                 {
                     label: "GitHub",
@@ -80,10 +76,6 @@ function Header() {
                 {
                     label: "Documentation",
                     href: "https://docs.mesastar.org"
-                },
-                {
-                    label: "Summer Schools",
-                    href: "/summer-schools"
                 }
             ]}
             enableDarkModeSwitch={true}
@@ -230,7 +222,7 @@ function Body() {
                             paragraph={`Materials from past MESA schools and how to host your own`}
                             buttonLabel="Check out MESA summer schools"
                             link={{
-                                href: "/summer-schools"
+                                href: "https://mesastar.org/marketplace/education/#mesa-summer-school-web-pages"
                             }}
                             iconUrls={[schoolPng]}
                         />
