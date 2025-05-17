@@ -230,7 +230,7 @@ function Body() {
                             paragraph={`Materials from past MESA schools and how to host your own`}
                             buttonLabel="Check out MESA summer schools"
                             link={{
-                                href: "https://mesastar.org/marketplace/education/#mesa-summer-school-web-pages"
+                                href: "/summer-schools"
                             }}
                             iconUrls={[schoolPng]}
                         />
