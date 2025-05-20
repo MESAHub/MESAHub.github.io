@@ -138,7 +138,7 @@ function Body() {
                 title="Interested in trying MESA?"
                 buttonLabel="Install MESA"
                 buttonLink={{
-                    href: "https://docs.mesastar.org/en/latest/quickstart.html"
+                    href: "https://docs.mesastar.org/en/latest/installation.html"
                 }}
                 illustration={{
                     type: "image",
