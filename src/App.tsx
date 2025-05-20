@@ -78,6 +78,10 @@ function Header() {
                     href: "https://docs.mesastar.org"
                 },
                 {
+                    label: "Zenodo Community",
+                    href: "https://zenodo.org/communities/mesa"
+                },
+                {
                     label: "Summer Schools",
                     href: "https://mesastar.org/summer-schools/"
                 }
@@ -188,7 +192,7 @@ function Body() {
                             paragraph={`Official release versions, SDKs, and MESA project inlists downloads`}
                             buttonLabel="Go to Zenodo"
                             link={{
-                                href: "https://zenodo.org/communities/mesa/records?q=&l=list&p=1&s=10"
+                                href: "https://zenodo.org/communities/mesa"
                             }}
                             iconUrls={[zenodoPng]}
                         />
