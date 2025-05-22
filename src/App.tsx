@@ -70,15 +70,15 @@ function Header() {
             title={<img src={mesaLogoPng} width="180" alt="MESA" />}
             links={[
                 {
-                    label: "GitHub",
-                    href: "https://github.com/MESAHub/mesa"
-                },
-                {
-                    label: "Documentation",
+                    label: "Docs",
                     href: "https://docs.mesastar.org"
                 },
                 {
-                    label: "Zenodo Community",
+                    label: "Code",
+                    href: "https://github.com/MESAHub/mesa"
+                },
+                {
+                    label: "Zenodo",
                     href: "https://zenodo.org/communities/mesa"
                 },
                 {
