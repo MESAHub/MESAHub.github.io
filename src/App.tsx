@@ -170,15 +170,6 @@ function Body() {
                             iconUrls={[sdkPng]}
                         />
                         <GlLogoCard
-                            title="Code Repository"
-                            paragraph={`Source code hosted on GitHub`}
-                            buttonLabel="Check out source code"
-                            link={{
-                                href: "https://github.com/MESAHub/mesa"
-                            }}
-                            iconUrls={[githubPng]}
-                        />
-                        <GlLogoCard
                             title="Documentation"
                             paragraph={`How to install and use MESA`}
                             buttonLabel="Read the docs"
@@ -186,6 +177,15 @@ function Body() {
                                 href: "https://docs.mesastar.org/"
                             }}
                             iconUrls={[readthedocsPng]}
+                        />
+                        <GlLogoCard
+                            title="Code Repository"
+                            paragraph={`Source code hosted on GitHub`}
+                            buttonLabel="Check out source code"
+                            link={{
+                                href: "https://github.com/MESAHub/mesa"
+                            }}
+                            iconUrls={[githubPng]}
                         />
                         <GlLogoCard
                             title="Zenodo Community"
@@ -237,7 +237,7 @@ function Body() {
                         <GlLogoCard
                             title="MESA-web"
                             paragraph={`Web interface to run MESA experiments`}
-                            buttonLabel="Try MESA-web"
+                            buttonLabel="Use MESA-web"
                             link={{
                                 href: "http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit"
                             }}
