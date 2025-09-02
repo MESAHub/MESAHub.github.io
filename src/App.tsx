@@ -278,10 +278,6 @@ function Body() {
                         description: `provides data on the properties of elements and isotopes`
                     },
                     {
-                        title: "Colors (colors)",
-                        description: `calculates on-the-fly colors of stars as observed by different instruments/filters`
-                    },
-                    {
                         title: "Constants (const)",
                         description: `defines a range of mathematical and physical constants`
                     },
@@ -330,41 +326,6 @@ function Body() {
             />
 
             <GlSectionDivider />
-
-            <GlArticle
-                title="About"
-                body={
-                    <div style={{ maxWidth: "820px" }}>
-                        <p>
-                            MESA (Modules for Experiments in Stellar Astrophysics) is an open-source
-                            suite for stellar evolution research and education. It combines
-                            state-of-the-art physics modules with a flexible framework, enabling users to
-                            run reproducible experiments from pre-main-sequence through advanced
-                            evolutionary phases.
-                        </p>
-                        <p>
-                            MESA was primarily developed through the concerted efforts of Bill Paxton
-                            over a 10-year period with the engagement and deep involvement of many
-                            theoretical and computational astrophysicists. Over the past decade, MESA has
-                            grown into an international community resource. The project is maintained by
-                            the MESA community. To get involved, report issues, or contribute
-                            improvements, please visit the Documentation and GitHub links in the header.
-                        </p>
-                        <p>
-                            For more info, see the{" "}
-                            <a
-                                href="https://docs.mesastar.org/en/latest/about.html"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                About MESA
-                            </a>{" "}
-                            page in the documentation.
-                        </p>
-                    </div>
-                }
-                hasAnimation={true}
-            />
         </>
     );
 }
