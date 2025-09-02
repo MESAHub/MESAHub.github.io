@@ -8,8 +8,8 @@ page created by: Philip Mocz (2024)
 
 ## Repository structure
 
--   The `main` branch contains the website source code
--   The `gh-pages` branch stores the built website
+- The `main` branch contains the website source code
+- The `gh-pages` branch stores the built website
 
 ## Updating the website
 
@@ -30,6 +30,12 @@ npm run preview
 
 and open `http://localhost:4173/` in your browser.
 
+If you want to upgrade dependencies (e.g. to patch security issues), try a
+
+```console
+yarn upgrade
+```
+
 ## How the website was set up
 
 Uses https://github.com/thieryw/gitlanding (v2) React components
@@ -38,9 +44,9 @@ Starts from demo template: https://github.com/garronej/gitlanding-demo
 
 Follows guide on publishing React web apps to GitHub Pages from https://github.com/gitname/react-gh-pages
 
--   add a `homepage` property to the `package.json` file
+- add a `homepage` property to the `package.json` file
 
--   also add a `predeploy` property and a `deploy` property to the `scripts` object:
+- also add a `predeploy` property and a `deploy` property to the `scripts` object:
 
 ```json
   "scripts": {
