@@ -13,9 +13,14 @@ const { OnyxiaUi, ofTypeTheme } = createOnyxiaUi({
         };
     },
     palette: {
-        //...defaultPalette
+        // Start from the built-in verdant palette, then override brand/use colors.
         ...verdantPalette,
-        // Your custom color
+        // Custom color overrides
+        light: {
+            ...verdantPalette.light,
+            main: "#fafbff",
+        },
+
     }
 });
 
