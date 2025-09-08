@@ -1,4 +1,4 @@
-import { createOnyxiaUi, defaultPalette, defaultGetTypographyDesc } from "onyxia-ui";
+import { createOnyxiaUi, verdantPalette, defaultGetTypographyDesc } from "onyxia-ui";
 import "onyxia-ui/assets/fonts/WorkSans/font.css";
 import "onyxia-ui/assets/fonts/Marianne/font.css";
 
@@ -13,7 +13,8 @@ const { OnyxiaUi, ofTypeTheme } = createOnyxiaUi({
         };
     },
     palette: {
-        ...defaultPalette
+        //...defaultPalette
+        ...verdantPalette,
         // Your custom color
     }
 });
