@@ -101,11 +101,11 @@ function Footer() {
             links={[
                 {
                     href: "https://github.com/MESAHub/mesa/blob/master/LICENSE",
-                    label: <img src="https://img.shields.io/github/license/MESAHub/mesa" alt="" />
+                    label: <img src="https://img.shields.io/github/license/MESAHub/mesa" alt="MESA license" />
                 },
                 {
-                    href: "https://github.com/MESAHub/mesa/releases/latest",
-                    label: <img src="https://img.shields.io/github/v/release/MESAHub/mesa" alt="" />
+                    href: "https://zenodo.org/records/13353788",
+                    label: <img src="https://img.shields.io/github/v/release/MESAHub/mesa" alt="MESA release version" />
                 }
             ]}
         />
