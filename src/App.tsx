@@ -143,7 +143,8 @@ function Body() {
                 illustration={{
                     type: "image",
                     src: mesaLogoPng,
-                    hasShadow: false
+                    hasShadow: false,
+                    alt: "MESA logo"
                 }}
                 hasAnimation={true}
             />
