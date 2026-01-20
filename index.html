@@ -1,13 +1,657 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/mesa-favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MESA Landing Page</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESA - Modules for Experiments in Stellar Astrophysics</title>
+    <link rel="icon" type="image/png" href="src/assets/img/mesa-favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero video {
+            max-width: 100%;
+            width: 600px;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 1.5rem;
+            color: #1a1a2e;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1976d2;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1565c0;
+            text-decoration: none;
+        }
+
+        /* Cards Section */
+        .cards-section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cards-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .card .btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Modules Section */
+        .modules {
+            background: white;
+            padding: 3rem 2rem;
+        }
+
+        .modules h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+        }
+
+        .modules-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .module-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1976d2;
+        }
+
+        .module-item::before {
+            content: "\2713";
+            color: #1976d2;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .module-item strong {
+            color: #1a1a2e;
+        }
+
+        .module-item span {
+            color: #666;
+        }
+
+        /* Citations Section */
+        .citations {
+            padding: 3rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .citations h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+        }
+
+        .bibtex-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #44475a;
+            color: #f8f8f2;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s, transform 0.1s;
+            z-index: 10;
+        }
+
+        .copy-btn:hover {
+            background: #6272a4;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-btn.copied {
+            background: #50fa7b;
+            color: #282a36;
+        }
+
+        .copy-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .bibtex {
+            background: #282a36;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            padding-top: 3.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .bibtex pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            padding: 3rem 2rem;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer .badges {
+            margin-bottom: 1rem;
+        }
+
+        footer .badges img {
+            margin: 0 0.5rem;
+        }
+
+        footer .links {
+            margin-bottom: 1rem;
+        }
+
+        footer .links a {
+            color: #90caf9;
+            margin: 0 1rem;
+        }
+
+        footer .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="src/assets/img/mesa-logo.png" alt="MESA">
+        </a>
+        <nav>
+            <a href="https://docs.mesastar.org">Docs</a>
+            <a href="https://github.com/MESAHub/mesa">Code</a>
+            <a href="https://zenodo.org/communities/mesa">Zenodo</a>
+            <a href="https://mesastar.org/summer-schools/">Summer Schools</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Modules for Experiments in Stellar Astrophysics</h1>
+        <p>open-source software for stellar evolution modeling</p>
+        <video autoplay loop muted playsinline>
+            <source src="src/assets/videos/mesa1.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section class="cta">
+        <h2>Interested in trying MESA?</h2>
+        <a href="https://docs.mesastar.org/en/latest/installation.html" class="btn">Install MESA</a>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards">
+            <div class="card">
+                <img src="src/assets/img/mesa-favicon.png" alt="MESA">
+                <h3>MESA</h3>
+                <p>Latest MESA release version</p>
+                <a href="https://zenodo.org/records/13353788" class="btn">Get MESA</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/sdk.png" alt="SDK">
+                <h3>MESA SDK</h3>
+                <p>MESA Software Development Kit</p>
+                <a href="http://user.astro.wisc.edu/~townsend/static.php?ref=mesasdk" class="btn">Get MESA SDK</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/readthedocs.png" alt="Documentation">
+                <h3>Documentation</h3>
+                <p>How to install and use MESA</p>
+                <a href="https://docs.mesastar.org/" class="btn">Read the docs</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/github.png" alt="GitHub">
+                <h3>Code Repository</h3>
+                <p>Source code hosted on GitHub</p>
+                <a href="https://github.com/MESAHub/mesa" class="btn">Check out source code</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/zenodo.png" alt="Zenodo">
+                <h3>Zenodo Community</h3>
+                <p>Official release versions, SDKs, and MESA project inlists downloads</p>
+                <a href="https://zenodo.org/communities/mesa" class="btn">Go to Zenodo</a>
+            </div>
+
+            <div class="card">
+                <img src="https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png" alt="Marketplace">
+                <h3>MESA Marketplace</h3>
+                <p>Resources for published papers using MESA</p>
+                <a href="https://mesastar.org/marketplace/" class="btn">Go to Marketplace</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/mailman.png" alt="Mailing List">
+                <h3>MESA Users Mailing List</h3>
+                <p>Info about new releases, news items, and requests for help/bug reports</p>
+                <a href="https://lists.mesastar.org/mailman/listinfo/mesa-users" class="btn">Sign up for mailing list</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/python.png" alt="Python">
+                <h3>mesa_reader</h3>
+                <p>Python module to interact and plot MESA data (pip install mesa_reader)</p>
+                <a href="https://github.com/wmwolf/py_mesa_reader" class="btn">Get mesa_reader</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/school.png" alt="Summer Schools">
+                <h3>MESA Summer Schools</h3>
+                <p>Materials from past MESA schools and how to host your own</p>
+                <a href="https://mesastar.org/summer-schools/" class="btn">Check out MESA summer schools</a>
+            </div>
+
+            <div class="card">
+                <img src="src/assets/img/web.png" alt="MESA-web">
+                <h3>MESA-web</h3>
+                <p>Web interface to run MESA experiments</p>
+                <a href="http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit" class="btn">Use MESA-web</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="modules">
+        <h2>Modules</h2>
+        <div class="modules-list">
+            <div class="module-item">
+                <div><strong>Star (star)</strong> — <span>main module for stellar evolution</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Binary (binary)</strong> — <span>module for binary star evolution</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Asteroseismology (astero)</strong> — <span>calculates asteroseismic variables</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Atmospheres (atm)</strong> — <span>calculates the surface temperature and pressure, to use as boundary conditions</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Automatic Differentiation (auto_diff)</strong> — <span>provides automatic calculation of (forward) derivatives using the chain rule</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Element Data (chem)</strong> — <span>provides data on the properties of elements and isotopes</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Colors (colors)</strong> — <span>calculates on-the-fly colors of stars as observed by different instruments/filters</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Constants (const)</strong> — <span>defines a range of mathematical and physical constants</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Equation of State (eos)</strong> — <span>provides the equation of state</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Opacities (kap)</strong> — <span>provides radiative opacities combined with conductive opacities</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Nuclear Reaction Networks (net)</strong> — <span>implements nuclear reaction networks</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Thermal Neutrinos (neu)</strong> — <span>provides the specific rates of energy loss via various thermal neutrino processes</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Nuclear Reaction Rates (rates)</strong> — <span>provides thermonuclear reaction rates and weak reaction rates</span></div>
+            </div>
+            <div class="module-item">
+                <div><strong>Turbulence (turb)</strong> — <span>provides various mixing theories (semiconvection, thermohaline, mixing length theory, time-dependent convection)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="citations">
+        <h2>Cite the MESA papers</h2>
+        <div class="bibtex-container">
+            <button class="copy-btn" onclick="copyBibtex(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>Copy</span>
+            </button>
+            <div class="bibtex">
+                <pre id="bibtex-content">@ARTICLE{Paxton2011,
+  author = {{Paxton}, B. and {Bildsten}, L. and {Dotter}, A. and {Herwig}, F. and {Lesaffre}, P. and {Timmes}, F.},
+  title = {{Modules for Experiments in Stellar Astrophysics (MESA)}},
+  journal = {\apjs},
+  year = {2011},
+  volume = {192},
+  pages = {3},
+  doi = {10.1088/0067-0049/192/1/3},
+}
+
+@ARTICLE{Paxton2013,
+  author = {{Paxton}, B. and {Cantiello}, M. and {Arras}, P. and {Bildsten}, L. and {Brown}, E.~F. and {Dotter}, A. and {Mankovich}, C. and {Montgomery}, M.~H. and {Stello}, D. and {Timmes}, F.~X. and {Townsend}, R.},
+  title = {{Modules for Experiments in Stellar Astrophysics (MESA): Planets, Oscillations, Rotation, and Massive Stars}},
+  journal = {\apjs},
+  year = {2013},
+  volume = {208},
+  pages = {4},
+  doi = {10.1088/0067-0049/208/1/4},
+}
+
+@ARTICLE{Paxton2015,
+  author = {{Paxton}, B. and {Marchant}, P. and {Schwab}, J. and {Bauer}, E.~B. and {Bildsten}, L. and {Cantiello}, M. and {Dessart}, L. and {Farmer}, R. and {Hu}, H. and {Langer}, N. and {Townsend}, R.~H.~D. and {Townsley}, D.~M. and {Timmes}, F.~X.},
+  title = {{Modules for Experiments in Stellar Astrophysics (MESA): Binaries, Pulsations, and Explosions}},
+  journal = {\apjs},
+  year = {2015},
+  volume = {220},
+  pages = {15},
+  doi = {10.1088/0067-0049/220/1/15},
+}
+
+@ARTICLE{Paxton2018,
+  author = {{Paxton}, B. and {Schwab}, J. and {Bauer}, E.~B. and {Bildsten}, L. and {Blinnikov}, S. and {Duffell}, P. and {Farmer}, R. and {Goldberg}, J.~A. and {Marchant}, P. and {Sorokina}, E. and {Thoul}, A. and {Townsend}, R.~H.~D. and {Timmes}, F.~X.},
+  title = {{Modules for Experiments in Stellar Astrophysics (MESA): Convective Boundaries, Element Diffusion, and Massive Star Explosions}},
+  journal = {\apjs},
+  year = {2018},
+  volume = {234},
+  pages = {34},
+  doi = {10.3847/1538-4365/aaa5a8},
+}
+
+@ARTICLE{Paxton2019,
+  author = {{Paxton}, Bill and {Smolec}, R. and {Schwab}, Josiah and {Gautschy}, A. and {Bildsten}, Lars and {Cantiello}, Matteo and {Dotter}, Aaron and {Farmer}, R. and {Goldberg}, Jared A. and {Jermyn}, Adam S. and {Kanbur}, S.~M. and {Marchant}, Pablo and {Thoul}, Anne and {Townsend}, Richard H.~D. and {Wolf}, William M. and {Zhang}, Michael and {Timmes}, F.~X.},
+  title = "{Modules for Experiments in Stellar Astrophysics (MESA): Pulsating Variable Stars, Rotation, Convective Boundaries, and Energy Conservation}",
+  journal = {\apjs},
+  year = "2019",
+  volume = {243},
+  pages = {10},
+  doi = {10.3847/1538-4365/ab2241},
+}
+
+@ARTICLE{Jermyn2023,
+  author = {{Jermyn}, Adam S. and {Bauer}, Evan B. and {Schwab}, Josiah and {Farmer}, R. and {Ball}, Warrick H. and {Bellinger}, Earl P. and {Dotter}, Aaron and {Joyce}, Meridith and {Marchant}, Pablo and {Mombarg}, Joey S.~G. and {Wolf}, William M. and {Sunny Wong}, Tin Long and {Cinquegrana}, Giulia C. and {Farrell}, Eoin and {Smolec}, R. and {Thoul}, Anne and {Cantiello}, Matteo and {Herwig}, Falk and {Toloza}, Odette and {Bildsten}, Lars and {Townsend}, Richard H.~D. and {Timmes}, F.~X.},
+  title = "{Modules for Experiments in Stellar Astrophysics (MESA): Time-dependent Convection, Energy Conservation, Automatic Differentiation, and Infrastructure}",
+  journal = {\apjs},
+  year = 2023,
+  volume = {265},
+  pages = {15},
+  doi = {10.3847/1538-4365/acae8d},
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <p>
+                MESA (Modules for Experiments in Stellar Astrophysics) is an open-source suite for stellar evolution research and education. It combines state-of-the-art physics modules with a flexible framework, enabling users to run reproducible experiments from pre-main-sequence through advanced evolutionary phases.
+            </p>
+            <p>
+                MESA was primarily developed through the concerted efforts of Bill Paxton over a 10-year period with the engagement and deep involvement of many theoretical and computational astrophysicists. Over the past decade, MESA has grown into an international community resource. The project is maintained by the MESA community. To get involved, report issues, or contribute improvements, please visit the Documentation and GitHub links in the header.
+            </p>
+            <p>
+                For more info, see the <a href="https://docs.mesastar.org/en/latest/about.html" target="_blank">About MESA</a> page in the documentation.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="badges">
+            <a href="https://github.com/MESAHub/mesa/blob/master/LICENSE">
+                <img src="https://img.shields.io/github/license/MESAHub/mesa" alt="MESA license">
+            </a>
+            <a href="https://zenodo.org/records/13353788">
+                <img src="https://img.shields.io/github/v/release/MESAHub/mesa" alt="MESA release version">
+            </a>
+        </div>
+        <div class="links">
+            <a href="https://github.com/MESAHub/mesa">GitHub</a>
+            <a href="https://docs.mesastar.org">Documentation</a>
+            <a href="https://github.com/MESAHub/MESAHub.github.io">Edit this website</a>
+        </div>
+        <div class="copyright">
+            &copy; Copyright 2026, The MESA Team.
+        </div>
+    </footer>
+
+    <script>
+        function copyBibtex(button) {
+            const bibtexContent = document.getElementById('bibtex-content').textContent;
+
+            navigator.clipboard.writeText(bibtexContent).then(() => {
+                // Update button to show success
+                const span = button.querySelector('span');
+                const originalText = span.textContent;
+
+                button.classList.add('copied');
+                span.textContent = 'Copied!';
+
+                // Update icon to checkmark
+                button.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />';
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    span.textContent = originalText;
+                    button.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = bibtexContent;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+
+                const span = button.querySelector('span');
+                span.textContent = 'Copied!';
+                button.classList.add('copied');
+
+                setTimeout(() => {
+                    span.textContent = 'Copy';
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
 </html>
